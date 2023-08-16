@@ -1,0 +1,90 @@
+@use "../mixins";
+
+.site-main {
+    padding-top: 35px;
+    &__hero {
+        @include mixins.background-img($img:"../../images/hero-bg.svg",$w:611px,$h:382px);
+        background-position-x:calc(50% + 335px);
+        background-position-y:top;
+    }
+    &__herodiv {
+        width: 543px;
+        margin-bottom: 146px;
+    }
+    &__hero-title {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #0b132a;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 70px;
+    }
+    &__hero-span {
+        font-weight: 700;
+    }
+    &__hero-desc {
+        margin: 0;
+        margin-bottom: 50px;
+        color: #4f5665;
+        line-height: 30px;
+    }
+    &__hero-desc-span {
+        font-weight: 500;
+    }
+    &__hero-link {
+        display: inline-block;
+        margin-bottom: 24px;
+        text-decoration: none;
+        min-width:250px;
+        padding: 18px 78px;
+        border-radius: 10px;
+        color:#fff;
+        font-weight: 700;
+        background-color: #f53838;  
+        border-radius: 10px;
+    }
+    &__hero-list {
+        @include mixins.unstyled-list;
+        padding-top: 37px;
+        padding-bottom: 37px;
+        border-radius:10px;
+        box-shadow: 2px 25px 65px 0px rgba(0,0,0,0.27);
+        -webkit-box-shadow: 2px 25px 65px 0px rgba(0,0,0,0.27);
+        background-color: #fff;
+    }
+    &__hero-item {
+        display: flex;
+        align-items: center;
+        column-gap: 36px;
+        padding: 30px 125px 30px 91px;
+        color: #4F5665;
+        font-size: 20px;
+        font-style: normal;
+        line-height: 30px;
+        &::before {
+            @include mixins.psevdo-el(55px,55px,inline-block,"../../images/user-icon.svg");
+        }
+        &:nth-child(2) {
+            border-right: 2px solid #eeeff2;
+            border-left: 2px solid #eeeff2;
+            &::before {
+                @include mixins.psevdo-el(55px,55px,inline-block,"../../images/location-icon.svg");
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                @include mixins.psevdo-el(55px,55px,inline-block,"../../images/Server-icon.svg");
+            }
+        }
+    }
+    &__bold {
+        display: block;
+        margin-bottom: 5px;
+        color: #0b132a;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+    }
+}

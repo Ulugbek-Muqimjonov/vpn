@@ -1,0 +1,41 @@
+@use "../mixins";
+.network {
+    padding-bottom: 50px;
+    &__innerdiv {
+        width: 555px;
+        margin: 0 auto;
+        margin-bottom: 155px;
+        text-align: center;
+    }
+    &__title-wrapper {
+        width: 383px;
+        margin: 0 auto;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #0b132a;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 50px;
+    }
+    &__desc {
+        margin: 0;
+        color: #4f5665;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 54px;
+    }
+    &__partner-list {
+        @include mixins.unstyled-list;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

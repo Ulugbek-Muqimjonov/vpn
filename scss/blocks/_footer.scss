@@ -1,0 +1,55 @@
+@use "../mixins";
+.footer {
+    position: relative;
+    padding-top: 180px;
+    background-color: #f8f8f8;
+    &__wrapper {
+        @include mixins.display($x:space-between)
+    }
+    &__innerdiv1 {
+        width: 340px;
+    }
+    &__desc {
+        margin: 0;
+        margin-bottom: 30px;
+        color: #4F5665;
+        line-height: 30px;
+    }
+    &__apps-list {
+        @include mixins.unstyled-list;
+        // margin-bottom: 30px;
+    }
+    &__innerdiv-span {
+        color: #afb5c0;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    &__innerdiv-span-bold {
+        font-weight: 500;
+    }
+    &__innerdiv2 {
+        @include mixins.display($col:126px)
+    }
+    &__card {
+        text-align: left;
+    }
+    &__card-list {
+        @include mixins.unstyled-list($direc:column,$row:10px);
+    }
+    &__bold {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #0b132a;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 166.667% */
+    }
+    &__link {
+        text-decoration: none;
+        color: #4f5665;
+        font-style: normal;
+        line-height: 30px; /* 187.5% */
+    }
+}

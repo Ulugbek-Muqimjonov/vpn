@@ -1,0 +1,43 @@
+@use "../mixins";
+.features {
+    padding-top: 150px;
+    padding-bottom: 127px;
+    @include mixins.background-img("../../images/features-bg.svg",508px,415px);
+    background-position: calc(50% - 289px) calc(50% - 4px);
+
+    &__wrapper {
+        width: 427px;
+        margin-left: auto;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #0b132a;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 50px;
+    }
+    &__desc {
+        margin: 0;
+        margin-bottom: 23px;
+        color: #4F5665;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 30px;
+    }
+    &__list {
+        @include mixins.unstyled-list($direc:column,$row:15px)
+    }
+    &__item {
+        @include mixins.display($y:center,$col:11px);
+        color: #4f5665;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        &::before {
+            @include mixins.psevdo-el(24px,24px,inline-block,"../../images/check.svg")
+        }
+    }
+}

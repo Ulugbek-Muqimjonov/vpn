@@ -1,0 +1,112 @@
+@use "../mixins";
+.our-plan {
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background:linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0.00) 100%);
+    &__innerdiv {
+        width: 555px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        color: #0b132a;
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 50px;
+    }
+    &__desc {
+        margin: 0;
+        color: #4f5665;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    &__list {
+        @include mixins.unstyled-list;
+        justify-content: space-between;
+    }
+    &__item {
+        padding-top: 80px;
+        padding-right: 70px;
+        padding-bottom: 50px;
+        padding-left: 70px;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+        background-color: #fff;
+    }
+    &__list-title {
+        margin-bottom: 30px;
+        color: #0b132a;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        &::before {
+            @include mixins.psevdo-el(145px,165px,block,"../../images/gift.svg");
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    &__inner-list {
+        @include mixins.unstyled-list(column,0,10px);
+        text-align: left;
+        
+    }
+    &__inner-list--free {
+        margin-bottom: 130px;
+    }
+    &__inner-list--simple {
+        margin-bottom: 90px;
+    }
+    &__inner-list--pre {
+        margin-bottom: 50px;
+    }
+    &__inner-item {
+        @include mixins.display($y:center,$col:20px);
+        &::before {
+            @include mixins.psevdo-el(24px,24px,inline-block,"../../images/check2.svg");
+        }
+        color: #4f5665;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    &__span {
+        display: block;
+        margin-bottom: 20px;
+        color: #4f5665;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    &__inner-list-bold {
+        color: #0b132a;
+    }
+    &__inner-list-link {
+        min-width: 178px;
+        padding: 13px 63px;
+        text-decoration: none;
+        border-radius: 50px;
+        text-align: center;
+        border: 2px solid #f53838;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #f53838;
+        &:hover {
+            color: #fff;
+            background-color:#f53838;
+            box-shadow: 2px 35px 65px 0px rgba(245,56,56,0.27);
+            -webkit-box-shadow: 2px 35px 65px 0px rgba(245,56,56,0.27);
+            -moz-box-shadow: 2px 35px 65px 0px rgba(245,56,56,0.27);
+        }
+    }
+}
