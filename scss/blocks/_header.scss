@@ -9,8 +9,8 @@
     @include mixins.unstyled-list($col:40px);
   }
   &__second-list {
-    @include mixins.unstyled-list($col:30px);
     align-items: center;
+    @include mixins.unstyled-list($col:30px);
   }
   &__link {
     text-decoration: none;
